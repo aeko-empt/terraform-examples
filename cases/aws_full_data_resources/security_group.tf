@@ -1,0 +1,1 @@
+../../cases/aws_full_data_resources/resources/security_group.tf
