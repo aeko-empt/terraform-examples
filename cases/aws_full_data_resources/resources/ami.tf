@@ -11,8 +11,8 @@ resource "aws_ami" "my_ami" {
 
   ebs_block_device {
     device_name = "disk1"
-    snapshot_id = "snap-DDFAA984"
-    volume_size = 1
+    snapshot_id = data.aws_ebs_snapshot.data_snap.id
+    volume_size = 32
   }
   tags = {
       Name = "tag_ami"    # key = Name, Values = tag_ami

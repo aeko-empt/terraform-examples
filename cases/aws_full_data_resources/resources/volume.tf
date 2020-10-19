@@ -1,6 +1,6 @@
 resource "aws_ebs_volume" "volume" {
   availability_zone = var.az
-  size              = 1
+  size              = 32
 
   tags = {
     Name = "tag_vol"
