@@ -1,13 +1,15 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hc-registry.website.cloud.croc.ru/c2devel/croccloud"
-      version = "4.14.0-CROC1"
+      source  = "hc-registry.website.k2.cloud/c2devel/rockitcloud"
+      version = "24.1.0"
+      #source  = "hc-releases.website.k2.cloud/terraform-provider-aws/aws"
+      #version = "~> 3.63.0"
     }
-    tls = {
-      source  = "hc-registry.website.cloud.croc.ru/hashicorp/tls"
-      version = "~> 3.1.0"
-    }
+    #tls = {
+    #  source  = "hc-releases.website.k2.cloud/terraform-provider-tls/tls"
+    #  version = "~> 3.1.0"
+    #}
   }
 }
 
@@ -40,7 +42,7 @@ variable "az" {
 }
 
 variable "instance_type" {
-  default = "m1.micro"
+  default = "m1.small"
 }
 
 variable "account_id" {
@@ -53,7 +55,7 @@ variable "template_name" {
 }
 
 variable "insecure" {
-  default = false
+  default = true
 }
 
 provider "tls" {
